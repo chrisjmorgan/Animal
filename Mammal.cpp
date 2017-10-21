@@ -22,12 +22,19 @@ Mammal::Mammal(const char* n, const GenderType& gt,
 	tempLow = tmpL;
 }
 
-Mammal::Mammal(const Mammal& M): Animal(M)
-{
+Mammal::Mammal(const Mammal& M): Animal(M) {}
 
-}
 double Mammal::getBodyTemp()
 {
   return bodyTemp;
 }
 
+void Mammal::updateBodyTemp(double C)
+{
+  bodyTemp = C;	
+}
+
+bool Mamma::inRange()
+{
+	return (bodyTemp >= tempLow && bodyTemp <= tempHigh);
+}

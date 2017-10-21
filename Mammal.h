@@ -27,6 +27,8 @@ Public:
   Mammal(const Mammal& );
 
   ~Mammal();
+	
+	Mammal& operator= (const Mammal&);
 
   double getBodyTemp();
   void updateBodyTemp(double );
