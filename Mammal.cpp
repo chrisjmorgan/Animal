@@ -3,7 +3,9 @@
 // PROJECT 4
 // 2017-10-12
 
+#include <iostream>
 #include "Mammal.h"
+using namespace std;
 
 Mammal::Mammal(): Animal()
 {
@@ -34,7 +36,12 @@ void Mammal::updateBodyTemp(double C)
   bodyTemp = C;	
 }
 
-bool Mamma::inRange()
+bool Mammal::inRange()
 {
 	return (bodyTemp >= tempLow && bodyTemp <= tempHigh);
+}
+
+void Mammal::Display()
+{
+	cout << "Temperature in range: " << inRange() ? "Yes" : "No" << endl;
 }

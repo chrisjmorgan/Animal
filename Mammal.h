@@ -30,10 +30,9 @@ Public:
 	
 	Mammal& operator= (const Mammal&);
 
-  double getBodyTemp();
+  double getBodyTemp() const;
   void updateBodyTemp(double );
-  bool inRange();
-  
-};
+  bool inRange() const;
+  void Display() const;
 
 #endif
