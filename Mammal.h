@@ -35,4 +35,9 @@ Public:
   bool inRange() const;
   void Display() const;
 
+	void CageMaintenance() const
+	{
+		cout << "Give food and water, Make sure no children fall in." << endl;
+	}
+};
 #endif

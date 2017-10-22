@@ -15,25 +15,35 @@ Mammal::Mammal(): Animal()
 Mammal::Mammal(const char* name): Animal(name) {}
 
 Mammal::Mammal(const char* n, const GenderType& gt,
-		           double fc, double lf, const DietType& dt,
-							 const FeedType& ft, double bt, double tmpH, double tmpL)
+		double fc, double lf, const DietType& dt,
+		const FeedType& ft, double bt, double tmpH, double tmpL)
 :Animal(n, gt, fc, lf, dt, ft)
 {
-	bodtTemp = bt;
+	bodyTemp = bt;
 	tempHigh = tmpH;
 	tempLow = tmpL;
 }
 
 Mammal::Mammal(const Mammal& M): Animal(M) {}
 
+Mammal::~Mammal() {}
+
+Mamaml& Mammal::operator= (const Mammal& M)
+{
+	Animal::operator=(M);
+	bodyTemp = M.bodyTemp;
+	tempHigh = M.tempHigh;
+	tempLow = M.tempLow;
+}
+
 double Mammal::getBodyTemp()
 {
-  return bodyTemp;
+	return bodyTemp;
 }
 
 void Mammal::updateBodyTemp(double C)
 {
-  bodyTemp = C;	
+	bodyTemp = C;	
 }
 
 bool Mammal::inRange()
@@ -43,5 +53,8 @@ bool Mammal::inRange()
 
 void Mammal::Display()
 {
+	Animal::Display();
 	cout << "Temperature in range: " << inRange() ? "Yes" : "No" << endl;
 }
+
+
