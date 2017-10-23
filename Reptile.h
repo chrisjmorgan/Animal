@@ -23,15 +23,15 @@ public:
 	Reptile(const char* );
 	Reptile(const char* n, const GenderType& gt,
 			double fc, double lf, const DietType& dt,
-			const FeedType& ft, Environment T);
+			const FeedType& ft, const Environment&);
 	Reptile(const Reptile& );
 
 	~Reptile();
 
 	Reptile& operator= (const Reptile&);
 
-	Environment Reptile::getType() const;
-	void Reptile::updateType(Environment E);
+	Environment getType() const;
+	void updateType(const Environment&);
 
 };
 #endif
