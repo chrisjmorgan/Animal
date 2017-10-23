@@ -20,13 +20,13 @@ Reptile::Reptile(const char* n, const GenderType& gt,
 		const FeedType& ft, const Environment& T)
 :Animal(n, gt, fc, lf, dt, ft, T)
 {
-  type = T;
+	type = T;
 }
 
-Reptile::Reptile(const Reptile& R)
+	Reptile::Reptile(const Reptile& R)
 :Animal(R)
 {
-  type = R.type;
+	type = R.type;
 }
 
 Reptile::~Reptile() {}
@@ -45,5 +45,5 @@ Environment Reptile::getType() const
 
 void Reptile::updateType(const Environment& T)
 {
-  type = T;
+	type = T;
 }
