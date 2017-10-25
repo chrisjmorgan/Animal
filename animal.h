@@ -41,59 +41,59 @@ using namespace std;
 
 enum DietType {DietTypeUnknown, Carnivore, Herbivore, Omnivore};
 enum FeedType {FeedTypeUnknown, Hay, LiveMice, RawMeat,
-               RawFish, GrubsNGrass};
+	RawFish, GrubsNGrass};
 enum GenderType {GenderUnknown, Female, Male};
 
 class Animal
 {
-   char*                        _name;
-   GenderType		        _gender;
-   double		        _feeding_cycle; //FC
-   double			_last_feeding;  //LF
-   DietType			_diet;
-   FeedType			_feed;
+	char* _name;
+	GenderType _gender;
+	double _feeding_cycle; //FC
+	double _last_feeding;  //LF
+	DietType _diet;
+	FeedType _feed;
 
 public:
-   //Post: Animal _gender == GenderUnknown
-   //		  _diet == DietTypeUnknown
-   //             _feed == FeedTypeUnknown
-   Animal ( );
-   Animal ( const char*, const GenderType&, double FC,
-            double LF, const DietType&, const FeedType&);
-   Animal ( const char* name );
-   Animal ( const Animal& );
+	//Post: Animal _gender == GenderUnknown
+	//		  _diet == DietTypeUnknown
+	//             _feed == FeedTypeUnknown
+	Animal ( );
+	Animal ( const char*, const GenderType&, double FC,
+			double LF, const DietType&, const FeedType&);
+	Animal ( const char* name );
+	Animal ( const Animal& );
 
-   virtual ~Animal ( );
+	virtual ~Animal ( );
 
-   Animal& operator= ( const Animal& );
+	Animal& operator= ( const Animal& );
 
-   const char* Name ( void ) const;
-   void Name ( const char* );
+	const char* Name ( void ) const;
+	void Name ( const char* );
 
-   GenderType Gender( void ) const;
-   void Gender ( const GenderType& g );
+	GenderType Gender( void ) const;
+	void Gender ( const GenderType& g );
 
-   double FeedingCycle( void ) const;
-   void FeedingCycle ( double FC );
+	double FeedingCycle( void ) const;
+	void FeedingCycle ( double FC );
 
-   double LastFeeding( void ) const;
-   void LastFeeding ( double LF );
+	double LastFeeding( void ) const;
+	void LastFeeding ( double LF );
 
-   DietType TypeOfDiet( void ) const;
-   void TypeOfDiet ( const DietType& dt );
+	DietType TypeOfDiet( void ) const;
+	void TypeOfDiet ( const DietType& dt );
 
-   FeedType TypeOfFeed( void ) const;
-   void TypeOfFeed ( const FeedType& ft );
+	FeedType TypeOfFeed( void ) const;
+	void TypeOfFeed ( const FeedType& ft );
 
-   void NextFeeding()const;
+	void NextFeeding()const;
 
-   //Post: Gives instructions to feed the animal
-   virtual void Feed ( void )const;
+	//Post: Gives instructions to feed the animal
+	virtual void Feed ( void )const;
 
-   //Post: Gives instructions to maintain the animal's cage
-   virtual void CageMaintenance ( void )const = 0;
+	//Post: Gives instructions to maintain the animal's cage
+	virtual void CageMaintenance ( void )const = 0;
 
-   virtual void Display()const;
+	virtual void Display()const;
 
 };
 #endif

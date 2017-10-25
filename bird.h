@@ -8,29 +8,29 @@ using namespace std;
 class Bird : public  Animal
 {
 
-  bool can_fly;
+	bool can_fly;
 
 public:
-  Bird ( );
-  Bird ( const char* );
-  Bird ( const char* n, const GenderType& gt,
-         double fc, double lf, const DietType& dt,
-         const FeedType& ft, bool);
-  Bird ( const Bird& );
+	Bird ( );
+	Bird ( const char* );
+	Bird ( const char* n, const GenderType& gt,
+			double fc, double lf, const DietType& dt,
+			const FeedType& ft, bool);
+	Bird ( const Bird& );
 
-  ~Bird ( );
+	~Bird ( );
 
-  Bird& operator= ( const Bird& );
+	Bird& operator= ( const Bird& );
 
-  bool CanFly ( ) const;
-  void CanFly ( bool );
-  void Display()const;
+	bool CanFly ( ) const;
+	void CanFly ( bool );
+	void Display()const;
 
-  void CageMaintenance()const
-  {
-    cout << "BIRD";
-    cout << "change the newspaper in the bottom of the cage"<<endl;
-  }
+	void CageMaintenance()const
+	{
+		cout << "BIRD";
+		cout << "change the newspaper in the bottom of the cage"<<endl;
+	}
 };
 
 #endif

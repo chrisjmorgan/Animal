@@ -13,7 +13,6 @@ using namespace std;
 class Elephant: public Mammal
 {
 	double weightInLBS;  
-  double bodytemp;
 
 public:
 
@@ -21,7 +20,7 @@ public:
 	Elephant(const char*);
 	Elephant(const char* n, const GenderType& gt,
 			double fc, double lf, const DietType& dt,
-			const FeedType& ft, double);
+			const FeedType& ft, double weight, double bodyTemp);
 	Elephant(const Elephant&);
 
 	~Elephant();
