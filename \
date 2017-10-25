@@ -18,7 +18,7 @@ Elephant::Elephant(const char* name):Mammal(name)
 Elephant::Elephant(const char* n, const GenderType& gt,
 			double fc, double lf, const DietType& dt,
 			const FeedType& ft, double lbs)
-:Mammal(n, gt, fc, lf, Herbivore, Hay, bodytemp, 98, 97)
+:Mammal(n, gt, fc, lf, Herbivore, Hey, temp, 98, 97)
 {
 	weightInLBS = lbs;
 }
@@ -47,7 +47,7 @@ void Elephant::setWeight(double W)
 	weightInLBS = W;
 }
 
-bool Elephant::inRange() const
+bool inRange() const
 {
 	return (weightInLBS >= 12000 && weightInLBS <= 15000);
 }
@@ -55,5 +55,5 @@ bool Elephant::inRange() const
 void Elephant::Display() const
 {
 	Mammal::Display();
-	cout << "The weight is:" << getWeight() << ". And it is "<< (inRange() ? "in range":"not in range") << endl;
+	cout << "The weight is:" << weightInLBS << ". And it is "<< (inRange()) ? "in range":"not in range" << endl:
 }

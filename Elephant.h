@@ -4,16 +4,16 @@
 // 2017-10-12
 
 #include <iostream>
-#include "animal.h"
+#include "Mammal.h"
 using namespace std;
 
 #ifndef ELEPHANT_H_CJM
 #define ELEPHANT_H_CJM
 
-class Elephant(): public Animal
+class Elephant: public Mammal
 {
 	double weightInLBS;  
-
+  double bodytemp;
 
 public:
 
