@@ -6,20 +6,20 @@
 
 Skunk::Skunk()
 {
-	descented = TRUE;
+	descented = true;
 }
 
 Skunk::Skunk(const char* n)
 {
-  descented = TRUE
+	descented = true;
 }
 
 Skunk::Skunk(const char* n, const GenderType& gt,
 		double fc, double lf, const DietType& dt,
-		const FeedType& ft, bool smelly)
-	:Mammal(n, gt, fc, lf, Omnivore, GrubsNGrass)
+		const FeedType& ft, bool smelly, double bodytemp)
+:Mammal(n, gt, fc, lf, Omnivore, GrubsNGrass, bodytemp, 97,95)
 {
-	descented = smelly
+	descented = smelly;
 }
 
 Skunk::Skunk(const Skunk& S):Mammal(S)
@@ -29,5 +29,12 @@ Skunk::Skunk(const Skunk& S):Mammal(S)
 
 Skunk::~Skunk() {}
 
-Skunk& k
+Skunk& Skunk::operator=(const Skunk& S)
+{
+	Mammal::operator=(S);
+	descented = S.descented;
+	return *this;
+}
+
+
 

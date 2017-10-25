@@ -20,7 +20,7 @@ public:
 	Skunk(const char*);
 	Skunk(const char* n, const GenderType& gt,
 			double fc, double lf, const DietType& dt,
-			const FeedType& ft, bool smelly);
+			const FeedType& ft, bool smelly, double bt);
 	Skunk(const Skunk&);
 
 	~Skunk();
