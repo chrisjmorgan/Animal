@@ -10,7 +10,7 @@
 #include "animal.h"
 using namespace std;
 
-enum EnvironmentType {water, land};
+enum Environment {water, land};
 
 class Reptile: public Animal
 {

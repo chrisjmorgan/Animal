@@ -1,3 +1,9 @@
+// Christopher Morgan
+// CISP 400 TUES/THURS
+// PROJECT 4
+// 2017-10-12
+
+
 #include "zoo.h"
 
 char main_menu()

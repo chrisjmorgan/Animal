@@ -1,3 +1,8 @@
+// Christopher Morgan
+// CISP 400 TUES/THURS
+// PROJECT 4
+// 2017-10-12
+
 #ifndef ZOO_H_CJM
 #include <iostream>
 #include "animal.h"

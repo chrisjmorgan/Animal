@@ -16,7 +16,7 @@ class Mammal: public Animal
   double tempHigh;
   double tempLow;
 
-Public:
+public:
 
 
   Mammal();

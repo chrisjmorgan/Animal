@@ -28,15 +28,16 @@ Mammal::Mammal(const Mammal& M): Animal(M) {}
 
 Mammal::~Mammal() {}
 
-Mamaml& Mammal::operator= (const Mammal& M)
+Mammal& Mammal::operator= (const Mammal& M)
 {
 	Animal::operator=(M);
 	bodyTemp = M.bodyTemp;
 	tempHigh = M.tempHigh;
 	tempLow = M.tempLow;
+	return *this;
 }
 
-double Mammal::getBodyTemp()
+double Mammal::getBodyTemp() const
 {
 	return bodyTemp;
 }
@@ -46,15 +47,15 @@ void Mammal::updateBodyTemp(double C)
 	bodyTemp = C;	
 }
 
-bool Mammal::inRange()
+bool Mammal::inRange() const
 {
 	return (bodyTemp >= tempLow && bodyTemp <= tempHigh);
 }
 
-void Mammal::Display()
+void Mammal::Display() const
 {
 	Animal::Display();
-	cout << "Temperature in range: " << inRange() ? "Yes" : "No" << endl;
+	cout << "Temperature in range: " << (inRange() ? "Yes" : "No") << endl;
 }
 
 

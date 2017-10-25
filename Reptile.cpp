@@ -18,12 +18,12 @@ Reptile::Reptile(const char* name):Animal(name)
 Reptile::Reptile(const char* n, const GenderType& gt,
 		double fc, double lf, const DietType& dt,
 		const FeedType& ft, const Environment& T)
-:Animal(n, gt, fc, lf, dt, ft, T)
+:Animal(n, gt, fc, lf, dt, ft)
 {
 	type = T;
 }
 
-	Reptile::Reptile(const Reptile& R)
+Reptile::Reptile(const Reptile& R)
 :Animal(R)
 {
 	type = R.type;
@@ -33,7 +33,7 @@ Reptile::~Reptile() {}
 
 Reptile& Reptile::operator= (const Reptile& R)
 {
-	Animal::operator= (b);
+	Animal::operator=(R);
 	type = R.type;
 	return *this;
 }
