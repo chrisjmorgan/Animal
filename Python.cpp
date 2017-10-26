@@ -15,7 +15,7 @@ Python::Python(const char* name) : Reptile(name)
 }
 
 Python::Python(const char* n, const GenderType& gt, double fc, double lf, double l) 
-: Reptile(n, gt, fc, lf, Carnivore, LiveMice, water)
+: Reptile(n, gt, fc, lf, Carnivore, LiveMice, land)
 {
   length = l;  
 }
