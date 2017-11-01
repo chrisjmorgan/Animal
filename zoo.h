@@ -17,6 +17,9 @@ class Zoo
 {
 	Animal* _zoo[MAX_ZOO];
   unsigned _num;
+	void add();
+	void feed();
+	void cage();
 public:
 	Zoo();
 	~zoo();
